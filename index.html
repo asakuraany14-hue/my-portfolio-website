@@ -1,19 +1,214 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Портфолио фотографа Устьянцевой Таты">
     <title>Главная - Устьянцева Тата</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Общие стили */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        
+        /* Стили для навигации */
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        header h1 {
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            background-color: rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+        
+        nav a:hover,
+        nav a.active {
+            background-color: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+        
+        /* Основной контент */
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+        
+        section {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        
+        section h1,
+        section h2 {
+            margin-bottom: 1rem;
+            color: #2c3e50;
+            font-size: 2rem;
+        }
+        
+        section p {
+            margin-bottom: 1.5rem;
+            color: #7f8c8d;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        /* Изображение профиля */
+        .profile-image {
+            max-width: 300px;
+            height: auto;
+            display: block;
+            margin: 2rem auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        /* Список навыков */
+        #skills-list {
+            list-style-position: inside;
+            margin: 1.5rem 0;
+            padding-left: 1.5rem;
+        }
+        
+        #skills-list li {
+            margin-bottom: 0.8rem;
+            color: #555;
+            font-size: 1.1rem;
+            padding-left: 0.5rem;
+        }
+        
+        /* Кнопки */
+        .style-button {
+            background-color: #667eea;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+            margin: 10px;
+        }
+        
+        .style-button:hover {
+            background-color: #5a6fd8;
+            transform: translateY(-2px);
+        }
+        
+        /* Футер */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            margin-top: 40px;
+            background-color: #2c3e50;
+            color: white;
+            border-top: 1px solid #ddd;
+        }
+        
+        footer p {
+            opacity: 0.8;
+        }
+        
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            nav ul {
+                gap: 10px;
+            }
+            
+            nav a {
+                padding: 6px 12px;
+                font-size: 0.8rem;
+            }
+            
+            section {
+                padding: 1.5rem;
+            }
+            
+            .profile-image {
+                max-width: 250px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+            
+            nav a {
+                width: 200px;
+                text-align: center;
+            }
+            
+            .style-button {
+                display: block;
+                width: 100%;
+                margin: 10px 0;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Устьянцева Тата </h1>
+        <h1>Устьянцева Тата</h1>
         <p>Фотограф</p>
         <nav>
             <ul>
-                <li><a href="index.html">Главная</a></li>
+                <li><a href="index.html" class="active">Главная</a></li>
                 <li><a href="about.html">Обо мне</a></li>
                 <li><a href="portfolio.html">Портфолио</a></li>
+                <li><a href="gallery.html">Галерея</a></li>
                 <li><a href="contact.html">Контакты</a></li>
             </ul>
         </nav>
@@ -21,23 +216,23 @@
     
     <main>
        <section>
-    <h1 id="main-title">Устьянцева Тата</h1>
-    <p id="intro-text">Меня зовут Тата, и я фотограф. На этом сайте вы можете узнать больше обо мне и моих проектах.</p>
-    <img src="photo_2025-09-14_11-21-36.jpg" alt="Это я" class="profile-image" id="profile-image">
-</section>
+            <h1 id="main-title">Устьянцева Тата</h1>
+            <p id="intro-text">Меня зовут Тата, и я фотограф. На этом сайте вы можете узнать больше обо мне и моих проектах.</p>
+            <img src="photo_2025-09-14_11-21-36.jpg" alt="Это я" class="profile-image" id="profile-image">
+        </section>
 
-<section>
-    <h2 id="skills-title">Мои навыки</h2>
-    <ul id="skills-list">
-        <li>Владение камерой и техническими основами</li>
-        <li>Понимание и работа со светом</li>
-        <li>Композиция и художественное видение</li>
-        <li>Навыки общения и работы с людьми</li>
-    </ul>
-</section>
-
-<button id="change-style-btn" class="style-button">Изменить стиль заголовка</button>
-<button id="add-skill-btn" class="style-button">Добавить навык</button>
+        <section>
+            <h2 id="skills-title">Мои навыки</h2>
+            <ul id="skills-list">
+                <li>Владение камерой и техническими основами</li>
+                <li>Понимание и работа со светом</li>
+                <li>Композиция и художественное видение</li>
+                <li>Навыки общения и работы с людьми</li>
+            </ul>
+            
+            <button id="change-style-btn" class="style-button">Изменить стиль заголовка</button>
+            <button id="add-skill-btn" class="style-button">Добавить навык</button>
+        </section>
     </main>
     
     <footer>
