@@ -1,0 +1,33 @@
+#one {
+    width: 10%;
+    height: 15%;
+    font-family: Disket Mono;
+    color: aliceblue;
+    background-color: rgb(93, 0, 255);
+    border: 1px black;
+    text-align: center;
+    align-content: center;
+}
+
+.two {
+    width: 20%;
+    height: 15%;
+    font-family: Disket Mono;
+    color: aliceblue;
+    background-color: rgb(255, 119, 0);
+    border: 1px black;
+    border-radius: 15%;
+    text-align: center;
+    align-content: center;
+}
+
+div {
+    width: 20%;
+    height: 15%;
+    font-family: Disket Mono;
+    color: aliceblue;
+    background-color: rgb(93, 0, 255);
+    border: 1px black;
+    text-align: center;
+    align-content: center;
+}
