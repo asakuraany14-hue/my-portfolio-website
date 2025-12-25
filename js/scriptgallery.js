@@ -3,19 +3,19 @@ let images = [
     // Категория: Люди
     {
         id: 1,
-        url: "images/люди/Пленка--4.jpg", // или просто "Пленка--4.jpg" если в корне
+        url: "Пленка--4.jpg",
         title: "Пленка 4",
         category: "people"
     },
     {
         id: 2,
-        url: "images/люди/Пленка-4512.jpg",
+        url: "Пленка-4512.jpg",
         title: "Пленка 4512",
         category: "people"
     },
     {
         id: 3,
-        url: "images/люди/Элеонора Владимировна--2.jpg",
+        url: "Элеонора Владимировна--2.jpg",
         title: "Элеонора Владимировна",
         category: "people"
     },
@@ -23,19 +23,19 @@ let images = [
     // Категория: Природа
     {
         id: 4,
-        url: "images/природа/2025-09-29-4091.jpg",
+        url: "2025-09-29-4091.jpg",
         title: "Осенний пейзаж",
         category: "nature"
     },
     {
         id: 5,
-        url: "images/природа/2025-10-06-5279.jpg",
+        url: "2025-10-06-5279.jpg",
         title: "Лесная тропа",
         category: "nature"
     },
     {
         id: 6,
-        url: "images/природа/2025-10-06-5449.jpg",
+        url: "2025-10-06-5449.jpg",
         title: "Закат в горах",
         category: "nature"
     },
@@ -43,35 +43,21 @@ let images = [
     // Категория: Город
     {
         id: 7,
-        url: "images/город/2025-10-06-5398.jpg",
+        url: "2025-10-06-5398.jpg",
         title: "Городские огни",
         category: "city"
     },
     {
         id: 8,
-        url: "images/город/2025-10-13-7315.jpg",
+        url: "2025-10-13-7315.jpg",
         title: "Уличная фотография",
         category: "city"
     },
     {
         id: 9,
-        url: "images/город/2025-10-20-7131.jpg",
+        url: "2025-10-20-7131.jpg",
         title: "Архитектура",
         category: "city"
-    },
-    
-    // Можно добавить еще фотографии с других страниц
-    {
-        id: 10,
-        url: "photo_2025-09-14_11-21-36.jpg",
-        title: "Мой портрет",
-        category: "people"
-    },
-    {
-        id: 11,
-        url: "photo_2025-09-14_11-21-36 (2).jpg",
-        title: "Автопортрет",
-        category: "people"
     }
 ];
 
@@ -103,8 +89,8 @@ function renderGallery(imagesToShow = images) {
     
     if (imagesToShow.length === 0) {
         galleryGrid.innerHTML = `
-            <div class="no-images">
-                <p>В этой категории пока нет изображений.</p>
+            <div class="no-images" style="text-align: center; padding: 40px; color: #7f8c8d;">
+                <h3>В этой категории пока нет изображений</h3>
                 <p>Добавьте первое изображение через форму выше!</p>
             </div>
         `;
@@ -118,7 +104,7 @@ function renderGallery(imagesToShow = images) {
         galleryItem.dataset.index = index;
         
         galleryItem.innerHTML = `
-            <img src="${image.url}" alt="${image.title}" loading="lazy" onerror="this.src='https://via.placeholder.com/400x300?text=Изображение+не+найдено'">
+            <img src="${image.url}" alt="${image.title}" loading="lazy">
             <div class="gallery-item-info">
                 <div class="gallery-item-title">${image.title}</div>
                 <div class="gallery-item-category">${getCategoryName(image.category)}</div>
