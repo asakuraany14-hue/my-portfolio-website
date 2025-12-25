@@ -478,6 +478,18 @@
             <div class="modal-info">
                 <h3 id="modal-title"></h3>
                 <p id="modal-category"></p>
+
+                <!-- Добавить в секцию после формы -->
+<section class="counter-section">
+    <h3>Статистика посещений</h3>
+    <div id="user-stats" class="user-stats">
+        <!-- Статистика будет загружена через JavaScript -->
+    </div>
+    <button onclick="userCounter.resetStats()" style="margin-top: 10px; padding: 8px 16px; background-color: #e74c3c; color: white; border: none; border-radius: 5px; cursor: pointer;">
+        Сбросить статистику
+    </button>
+</section>
+                
             </div>
         </div>
     </div>
